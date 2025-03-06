@@ -42,7 +42,7 @@ public class dice {
 			
 			
 		}
-		close.scanner();
+		scanner.close();
 		
 	}
 
