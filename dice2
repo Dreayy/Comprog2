@@ -1,49 +1,49 @@
-// every time user guesses wrong, the dice does not roll again
+ //every time the user gets a wrong guess, the dice rolls again
 
+package javadice;
 
 
 import java.util.Scanner;
 import java.util.Random;
 
-public class dice {
+public class dice2 {
 
 	public static void main(String[] args) {
 		
 		//instance for Scanner
 		Scanner scanner = new Scanner (System.in);
 		
-		
 		//instance for Random
 		Random random = new Random();
+			
 		
-		
-		
-		int userinput = random.nextInt(6) + 1;
-		int guess = 0;
-		int tries = 0;
-		
-		System.out.println("Enter Dice Number1:");		
+		int userinput, guess = 0, tries = 0;
 
-		while (guess != userinput) {
+		
+		while (true) {
+			userinput = random.nextInt(6) + 1;
+	
+		System.out.println("Enter a Dice Number:");		
 			guess = scanner.nextInt();
 			tries++;
 			
-			if (guess < 1 || guess > 6 ) {
-				System.out.println("Please enter a number between 1 and 6");
-			}
-			else if (guess != userinput) {
-				System.out.println("Wrong, Guess again.");
-			}
-			else if (guess == userinput) {
+		//	if (guess < 1 || guess > 6 ) {
+		//System.out.println("Please enter a number between 1 and 6");}
+			
+			if (guess == userinput) {
 				System.out.println("Correct! You guessed the correct number in " 
 						+ tries + "tries.");
 				break;
+			}
+			
+			else {
+				System.out.print("Wrong, Guess again.");
 				}
-			
-			
-		}
+
+				}
 		scanner.close();
+		}
+		
 		
 	}
 
-}
