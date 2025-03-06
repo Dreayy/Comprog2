@@ -1,2 +1,51 @@
 # Comprog2
 java programming language
+// every time user guesses wrong, the dice does not roll again
+
+
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class dice {
+
+	public static void main(String[] args) {
+		
+		//instance for Scanner
+		Scanner scanner = new Scanner (System.in);
+		
+		
+		//instance for Random
+		Random random = new Random();
+		
+		
+		
+		int userinput = random.nextInt(6) + 1;
+		int guess = 0;
+		int tries = 0;
+		
+		System.out.println("Enter Dice Number1:");		
+
+		while (guess != userinput) {
+			guess = scanner.nextInt();
+			tries++;
+			
+			if (guess < 1 || guess > 6 ) {
+				System.out.println("Please enter a number between 1 and 6");
+			}
+			else if (guess != userinput) {
+				System.out.println("Wrong, Guess again.");
+			}
+			else if (guess == userinput) {
+				System.out.println("Correct! You guessed the correct number in " 
+						+ tries + "tries.");
+				break;
+				}
+			
+			
+		}
+		
+		scanner.close();
+	}
+
+}
