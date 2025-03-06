@@ -1,8 +1,5 @@
  //every time the user gets a wrong guess, the dice rolls again
 
-package javadice;
-
-
 import java.util.Scanner;
 import java.util.Random;
 
