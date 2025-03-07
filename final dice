@@ -1,1 +1,46 @@
+import java.util.Scanner;
+import java.util.Random;
 
+public class fdice {
+
+	public static void main(String[] args) {
+		
+		//instance for Random
+		Random random = new Random();
+				
+		//instance for scanner
+		Scanner userinput = new Scanner(System.in);
+		
+		System.out.print("Guess a dice number: ");
+		
+		
+		
+	int storeduserinput = random.nextInt(6) + 1;
+	int guess = 0;
+	int tries = 0;
+	
+
+	
+	
+	while (guess != storeduserinput) {
+		guess = userinput.nextInt(); 
+		tries++;
+		
+		if (guess < 1 || guess > 6 ) {
+			System.out.print("From number 1 to 6 only, guess never counted, try again: ");
+			tries--;
+		}
+		else if (guess != storeduserinput) {
+			System.out.print("Wrong, Guess again: ");
+		}
+		
+		
+		else if (guess == storeduserinput) {
+			System.out.println("Correct! You guessed the correct dice number in " 
+					+ tries + " try/tries.");
+			break;
+		}
+		}
+	userinput.close();
+	}
+}
