@@ -38,7 +38,7 @@ public class fdice {
 		
 		else if (guess == storeduserinput) {
 			System.out.println("Congrats, You guessed correctly! It took you " 
-					+ tries + " try/tries!");
+					+ tries + " tries!");
 			break;
 		}
 		}
