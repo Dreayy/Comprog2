@@ -11,7 +11,8 @@ public class fdice {
 		//instance for scanner
 		Scanner userinput = new Scanner(System.in);
 		
-		System.out.print("Guess a dice number: ");
+		System.out.println("The dice has been rolled, guess the dice number: ");
+		System.out.print("Your guess: ");
 		
 		
 		
@@ -31,13 +32,13 @@ public class fdice {
 			tries--;
 		}
 		else if (guess != storeduserinput) {
-			System.out.print("Wrong, Guess again: ");
+			System.out.print("Incorrect, guess again: ");
 		}
 		
 		
 		else if (guess == storeduserinput) {
-			System.out.println("Correct! You guessed the correct dice number in " 
-					+ tries + " try/tries.");
+			System.out.println("Congrats, You guessed correctly! It took you " 
+					+ tries + " try/tries!");
 			break;
 		}
 		}
